@@ -130,6 +130,60 @@
     \vspace{20pt}
 
     \textbf{Question 5:}
+
+    To eliminate $y$, we multiply the first congruence by 15,
+    the second by 18:
+    \begin{align*}
+        \left\{
+            \begin{array}{l}
+                315x+270y\equiv 195\equiv 58 {\rm (mod\ 137)}\ \ \ (1)\\
+                576x+270y\equiv 162\equiv 25 {\rm (mod\ 137)}\ \ \ (2)
+            \end{array}
+        \right.
+    \end{align*}
+    $(2)-(1)$, we get:
+    $$261x\equiv -33 {\rm (mod\ 137)}$$
+    Factorize both sides, we get:
+    $$3^2\cdot 29x\equiv -3\cdot 11 {\rm (mod\ 137)}\ \ \ (*)$$
+    As $116\cdot 13=2^2\cdot 13\cdot 29\equiv 1 {\rm (mod\ 137)}$,
+    we know that a multiple inverse of 29 modulo 137 is $2^2\cdot 13$.
+    Multiple both sides of $(*)$ by $2^2\cdot 13$, we get:
+    \begin{align*}
+        3^2\cdot (2^2\cdot 13\cdot 29)x &\equiv 
+        -2^2\cdot 3\cdot 11\cdot 13 {\rm (mod\ 137)}\\
+        3^2\cdot x &\equiv 65 {\rm (mod\ 137)}\ \ \ (**)
+    \end{align*}
+    As $99\cdot 18=2\cdot 3^4\cdot 11\equiv 1 {\rm (mod\ 137)}$,
+    we know that a multiple inverse of $3^2$ modulo 137 is 
+    $2\cdot 3^2\cdot 11$.
+    Multiple both sides of $(**)$ by $2\cdot 3^2\cdot 11$, we get:
+    \begin{align*}
+        3^2\cdot 2\cdot 3^2\cdot 11\cdot x &\equiv 
+        65\cdot 2\cdot 3^2\cdot 11 {\rm (mod\ 137)}\\
+        x &\equiv 129 {\rm (mod\ 137)}
+    \end{align*}
+    Since $0\le x\le 136$, $x=129$ is the only solution.
+
+    Bring $x=129$ back to $21x+18y\equiv 13 {\rm (mod\ 137)}$,
+    we get:
+    \begin{align*}
+        18\cdot y &\equiv 44 {\rm (mod\ 137)}\\
+        2\cdot 3^2\cdot y &\equiv 44 {\rm (mod\ 137)}
+    \end{align*}
+
+    Apply the similar method while finding $x$,
+    as $99\cdot 18=2\cdot 3^4\cdot 11\equiv 1 {\rm (mod\ 137)}$,
+    we know that a multiple inverse of $2\cdot 3^2$ modulo 137 is 
+    $3^2\cdot 11$, multiple it on both sides:
+    \begin{align*}
+        2\cdot 3^2\cdot 3^2\cdot 11\cdot y &\equiv 
+        44\cdot 3^2\cdot 11 {\rm (mod\ 137)}\\
+        y &\equiv 109 {\rm (mod\ 137)}
+    \end{align*}
+    Since $0\le y\le 136$, $y=109$ is the only solution.
+
+    Therefore, the system has only one solution,
+    $x=129, y=109$.
     
 
     \end{spacing}
