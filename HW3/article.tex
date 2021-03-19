@@ -31,7 +31,7 @@
         21 &= 1\cdot 11 + 10\\
         11 &= 1\cdot 10 + 1
     \end{align*}
-    Reverse the steps, we have:
+    Reverse the steps(extended Euclidean algorithm), we have:
     \begin{align*}
         1&=11-1\cdot 10\\
          &=11-1\cdot (21-1\cdot 11)\\
@@ -67,6 +67,40 @@
 
     \textbf{Question 2:}
 
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+            \hline
+            A&B&C&D&E&F&G&H&I&J&K&L&M\\\hline
+            0&1&2&3&4&5&6&7&8&9&10&11&12\\
+            \hline\hline
+            N&O&P&Q&R&S&T&U&V&W&X&Y&Z\\\hline
+            13&14&15&16&17&18&19&20&21&22&23&24&25\\\hline
+        \end{tabular}
+    \end{center}
+    
+    (a)From the table above, the original message in integers is:
+
+    \hspace{2em} \texttt{12,4,4,19, ,0,19, ,19,7,4, ,15,0,17,10}
+
+    (b)According to (a), calculate $f(p)$ for each number $p$,
+    we can easily get the ciphertext in integers:
+    
+    \hspace{2em} \texttt{16,2,2,25, ,8,25, ,25,17,2, ,5,8,15,6}
+
+    (c) According to (b) and the table above:
+
+    \hspace{2em} \texttt{QCCZ IZ ZRB FIPG}
+
+    (d) Since $f(p)=(5p+8)\ {\rm mod\ 26}$, we have
+    $5p \equiv f(p)-8 {\rm (mod\ 26)}$.
+    By extended Euclidean algorithm, it's not difficult to find
+    that a multiple inverse of 5 modulo 26 is 21.
+
+    Thus, $p\equiv 21\cdot [f(p)-8]\equiv 21\cdot f(p)+14\
+    {\rm (mod\ 26)}$.
+
+    Therefore, $g(c)=(21c+14)\ {\rm mod\ 26}$.
+
 
     \vspace{20pt}
 
@@ -99,8 +133,8 @@
 
 
 
-    \vspace{20pt}
-
+    % \vspace{20pt}
+    \newpage
     \textbf{Question 4:}
 
     Note that $1027_{10}=2^{10}+2^1+2^0=(100\ 0000\ 0011)_2$,
@@ -116,7 +150,7 @@
         8^{2^7}&\equiv (4^2)\equiv 16 {\rm (mod\ 22)}\\
         8^{2^8}&\equiv (16^2)\equiv 14 {\rm (mod\ 22)}\\
         8^{2^9}&\equiv (14^2)\equiv 20 {\rm (mod\ 22)}\\
-        8^{2^{10}}&\equiv (20^2)\equiv 4 {\rm (mod\ 22)}\\
+        8^{2^{10}}&\equiv (20^2)\equiv 4 {\rm (mod\ 22)}
     \end{align*}
     According to repeated squaring method, we know that
     \begin{align*}
