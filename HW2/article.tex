@@ -1,0 +1,143 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{setspace}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+\title{\textbf{COMP2711} Homework2}
+\author{LIU, Jianmeng 20760163}
+\date{}
+
+\begin{document}
+    \maketitle
+
+    \begin{spacing}{1.4}
+
+    \setlength{\parindent}{0px}
+
+    \textbf{Question 1:}
+
+    (a)
+
+    \begin{tabular}{ll}
+    $1.\ \neg p$ & {\rm premises} \\
+    $2.\ \neg r$ & {\rm premises} \\
+    $3.\ \neg (p\vee q) \rightarrow r$ & {\rm premises}\\
+    $4.\ p \vee q \vee r$ & {\rm 3, equivalence}\\
+    $5.\ q$ & {\rm 1,2,4 disjunctive syllogism}
+    \end{tabular}
+    \vspace{20px}
+
+    (b)
+
+    \begin{tabular}{ll}
+        $1.\ \neg q$ & {\rm premises}\\
+        $2.\ p \rightarrow q$ & {\rm premises}\\
+        $3.\ \neg p \rightarrow (r \wedge s)$ & {\rm premises}\\
+        $4.\ \neg p$ & {\rm 1,2 modus tollens}\\
+        $5.\ r\wedge s$ & {\rm 3,4 modus ponens}\\
+        $6.\ r$ & {\rm 5 simplification}
+    \end{tabular}
+
+    \vspace{30px}
+
+
+    \textbf{Question 2:}
+
+    \hspace{2em} Let's begin with proving a lemma:
+
+    \textbf{Lemma:}  
+
+    \hspace{2em} 
+    For any integer $c$, if $c^2$ is even, then $c$ must be even.
+
+    \textbf{Prove:}
+
+    \hspace{2em}
+    Use \textbf{prove by contraposition}, that is, we prove 
+    ``For any integer c, if $c$ is odd, then $c^2$ is odd.''
+    Since $c$ is odd, we suppose $c=2k+1$, where $k\in \mathbb{N}$.
+    Then $$c^2=(2k+1)^2=(4k^2+4k+1)=2(2k^2+2k)+1$$ is odd, 
+    thereby the lemma is proved.\\
+
+    \setlength{\parindent}{2em}
+
+    Then we prove the original one: 
+    ``For any integers $a,b,c$, if $a^2+b^2=c^2$, then $a$ or $b$ is even.'',
+    use \textbf{prove by contradiction: }
+
+    Suppose $a$ and $b$ are both odd, $a=2m+1, b=2n+1$, 
+    where $m,n\in \mathbb{N}$. 
+    Then $$a^2+b^2=(2m+1)^2+(2n+1)^2=2(2m^2+2m+2n^2+2n+1)$$ is even, 
+    hence $c^2$ is even.
+
+    According to \textbf{Lemma} we just proved, $c$ must be even.
+    Let $c=2p, p\in \mathbb{N}$,
+    then $a^2+b^2=c^2$ can be written as:
+    \begin{align*}
+        2(2m^2+2m+2n^2+2n+1)&=4p^2 \\
+        4(m^2+m+n^2+n)+1&=4p^2
+    \end{align*}
+
+    However, it's obvious that left hand side is not divisible by 4,
+    that is, the equation doesn't hold, contradiction found!
+
+    Therefore, the statement is proved.
+
+    \vspace{30px}
+
+    \setlength{\parindent}{0em}
+    \textbf{Question 3:}
+
+    (a) $f(x)=x+1$. 
+    This function is injective since for every image $y\ge 1$,
+    there exist a \textbf{unique} preimage $x=y-1$; 
+    this function is not surjective since $y=0$ doesn't have a preimage.
+
+    \vspace{10px}
+
+    (b) $\displaystyle g(x)=\left\lfloor \frac{x}{2} \right\rfloor$.
+    This function is not injective since $g(0)=g(1)=0$;
+    this function is surjective since for any $y$, you can find
+    a preimage $x=2y$
+
+    \vspace{10px}
+
+    (c) $h(x)=x+(-1)^x$. 
+    Since identity function is forbidden, another straight forward idea
+    is that we let 
+    $h(0)=1, h(1)=0, h(2)=3, h(3)=2, h(4)=5, h(5)=4, \cdots$, that is, making
+    every pair of $x$ ``swap'' their $y$. 
+    It's obvious that after this transformation, the function is still
+    bijective, and there're many ways to express this function, 
+    such as the above one: $h(x)=x+(-1)^x$.
+
+
+    \vspace{10px}
+
+    (d)$\ \displaystyle u(x)=2\cdot \left\lfloor \frac{x}{2} \right\rfloor$.
+    This function is not injective since $u(0)=u(1)=0$;
+    this function is not surjective either since there doesn't exist
+    such preimage $x$ satisfying $u(x)=1$
+    (as $\left\lfloor \frac{x}{2} \right\rfloor$ can never be $\frac{1}{2}$).
+
+    \vspace{30px}
+
+    \textbf{Question 4:}
+
+    (a) Let $A=\left( 0,1\right], B=\left[ 1,2\right)$,
+    then $A\cap B=\left\{ 1 \right\}$, which is a finite set.
+
+    (b) Let $A=(0,1)\cup \mathbb{N}, B=(3,4)\cup \mathbb{N}$,
+    then $A\cap B=\mathbb{N}$, which is a countably infinite set.
+
+    (c) Let $A=(0,3), B=(1,4)$, then $A\cap B =(1,3)$,
+    which is an uncountably infinite set.
+
+
+
+    
+
+    \end{spacing}
+\end{document}

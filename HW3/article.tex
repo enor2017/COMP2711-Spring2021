@@ -1,0 +1,136 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{setspace}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+\title{\textbf{COMP2711} Homework3}
+\author{LIU, Jianmeng 20760163}
+\date{}
+
+\begin{document}
+    \maketitle
+
+    \begin{spacing}{1.4}
+
+    \setlength{\parindent}{0px}
+
+    \textbf{Question 1:}
+
+    From $32b-21a=19$, we have:
+    \begin{align*}
+        32b-21a&\equiv 19 (\rm mod \ 21)\\
+        32b&\equiv 19 (\rm mod \ 21)\ \ \ (*)
+    \end{align*}
+    To solve this congruence, we need to find a multiple inverse
+    of 32 modulo 21. Notice that gcd$(32, 21)=1$, so by
+    using the Euclidean algorithm, we have:
+    \begin{align*}
+        32 &= 1\cdot 21 + 11\\
+        21 &= 1\cdot 11 + 10\\
+        11 &= 1\cdot 10 + 1
+    \end{align*}
+    Reverse the steps, we have:
+    \begin{align*}
+        1&=11-1\cdot 10\\
+         &=11-1\cdot (21-1\cdot 11)\\
+         &=2\cdot 11-1\cdot 21\\
+         &=2\cdot (32-1\cdot 21)-1\cdot 21\\
+         &=2\cdot 32-3\cdot 21
+    \end{align*}
+    Thus,
+    \begin{align*}
+        2\cdot 32-3\cdot 21 &\equiv 1 ({\rm mod}\ 21)\\
+        2\cdot 32 &\equiv 1 ({\rm mod}\ 21)
+    \end{align*}
+    which means 2 is a multiple inverse of 32 modulo 21.
+    To solve $(*)$, we multiply 2 on both sides,
+    \begin{align*}
+        2\cdot 32b &\equiv 2\cdot 19 ({\rm mod}\ 21)\\
+        b &\equiv 38({\rm mod}\ 21) \equiv 17({\rm mod}\ 21)
+    \end{align*}
+    Thus, $b=17+21k$, where $k\in \mathbb{Z}$. 
+    Since $b\in \mathbb{Z}_{42}$, only $k=0$ and $k=1$ are valid,
+    which gives $b=17$ or $b=38$.
+    \begin{itemize}
+        \item When $b=17$, $32\cdot 17-21a=19$, 
+        we get $a=25\in \mathbb{Z}_{42}$.
+        \item When $b=38$, $32\cdot 38-21a=19$, 
+        we get $a=57\notin \mathbb{Z}_{42}$.
+    \end{itemize}
+
+    Therefore, there exists only one pair of $a,b$,
+    where $a=25, b=17$.
+
+    \vspace{20pt}
+
+    \textbf{Question 2:}
+
+
+    \vspace{20pt}
+
+    \textbf{Question 3:}
+
+    We first let $m=9\cdot 14\cdot 5=630$,
+    $M_1=m/9=70, M_2=m/14=45, M_3=m/5=126$.
+
+    By using extended Euclidean algorithm, we know:
+
+    \hspace{1em} 4 is an inverse of $M_1$ modulo 9, since 
+    $4\cdot 70\equiv 4\cdot 7\equiv 1 {\rm (mod\ 9)}$
+
+    \hspace{1em} 5 is an inverse of $M_2$ modulo 14, since 
+    $5\cdot 45\equiv 5\cdot 3\equiv 1{\rm (mod\ 14)}$
+
+    \hspace{1em} 1 is an inverse of $M_3$ modulo 5, since 
+    $1\cdot 126\equiv 1\cdot 1\equiv 1{\rm (mod\ 5)}$
+
+    So the solutions to the system are those $x$ such that:
+    \begin{align*}
+        x&\equiv 4\cdot 70\cdot 4+ 8\cdot 45\cdot 5
+        + 3 \cdot 126 \cdot 1\\
+        &=3298\\
+        &\equiv 148{\rm (mod\ 630)}
+    \end{align*}
+    Therefore, the solutions are those $x$ such that
+    $x\equiv 148{\rm (mod\ 630)}$, which can also be written as
+    $x=148+630k, k\in \mathbb{Z}$.
+
+
+
+    \vspace{20pt}
+
+    \textbf{Question 4:}
+
+    Note that $1027_{10}=2^{10}+2^1+2^0=(100\ 0000\ 0011)_2$,
+    compute:
+    \begin{align*}
+        8^{2^0}&\equiv 8 {\rm (mod\ 22)}\\
+        8^{2^1}&\equiv (8^2)\equiv 20 {\rm (mod\ 22)}\\
+        8^{2^2}&\equiv (20^2)\equiv 4 {\rm (mod\ 22)}\\
+        8^{2^3}&\equiv (4^2)\equiv 16 {\rm (mod\ 22)}\\
+        8^{2^4}&\equiv (16^2)\equiv 14 {\rm (mod\ 22)}\\
+        8^{2^5}&\equiv (14^2)\equiv 20 {\rm (mod\ 22)}\\
+        8^{2^6}&\equiv (20^2)\equiv 4 {\rm (mod\ 22)}\\
+        8^{2^7}&\equiv (4^2)\equiv 16 {\rm (mod\ 22)}\\
+        8^{2^8}&\equiv (16^2)\equiv 14 {\rm (mod\ 22)}\\
+        8^{2^9}&\equiv (14^2)\equiv 20 {\rm (mod\ 22)}\\
+        8^{2^{10}}&\equiv (20^2)\equiv 4 {\rm (mod\ 22)}\\
+    \end{align*}
+    According to repeated squaring method, we know that
+    \begin{align*}
+        8^{1027}&=8^{2^{10}}\cdot 8^{2^1}\cdot 8^{2^0}\\
+        &\equiv 4\cdot 20\cdot 8 {\rm (mod\ 22)}\\
+        &\equiv 2 {\rm (mod\ 22)}
+    \end{align*}
+    Therefore, $8^{1027}\equiv 2 {\rm (mod\ 22)}$
+    
+
+    \vspace{20pt}
+
+    \textbf{Question 5:}
+    
+
+    \end{spacing}
+\end{document}

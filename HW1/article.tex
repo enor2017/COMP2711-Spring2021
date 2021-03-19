@@ -1,0 +1,186 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{setspace}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+\title{\textbf{COMP2711} Homework1}
+\author{LIU, Jianmeng 20760163}
+\date{}
+
+\begin{document}
+    \maketitle
+
+    \begin{spacing}{1.4}
+
+    \textbf{Question 1:}
+
+    (a) $\neg C(\text{Jan}, \text{Sharon})$
+
+    (b) $\neg \forall x\;I(x)$
+
+    (c) $\exists x \forall y \left(I(y) \leftrightarrow x \ne y\right)$
+
+    (d) $\forall x \exists y
+    \left( I\left(x\right) \rightarrow 
+    \left( x\ne y \wedge C(x,y) \right) \right)$
+
+    (e) Apply De Morgan's law: $\forall x \forall y 
+    \left( x=y \vee C(x,y) \right)$
+
+    (f) There exists 2 students who haven't chatted 
+    with each other over the Internet.
+
+    \vspace{30px}
+
+    \textbf{Question 2:}
+
+    (a) \textbf{True.} For all $n$, we can choose $m=n^2+1$,
+    so that $m$ is an integer and $n^2<n^2+1=m$.
+
+    (b) \textbf{True.} Choose $n=1$, so that for all $m$,
+    $nm=1\cdot m = m$.
+
+    (c) \textbf{True.} There exists $n=3, m=1$ that can make
+    the statement true.
+
+    (d) \textbf{False.} When $m+n$ is odd, $\frac{m+n}{2}$ is 
+    not an integer. For example,
+    pick $m=5, n=6$, then $p=\frac{m+n}{2}=\frac{11}{2}$, which
+    is not an integer, then there doesn't exist such integer $p$.
+
+    \vspace{30px}
+
+    \textbf{Question 3:}
+
+    (a) This statement means that for all different two $x,y\in U$,
+    pick any $z\in U$, there'll be either $z=x$ or $z=y$, or both.
+    Therefore, we pick $U=\left\{ 1,2 \right\}$, so $x=1, y=2$ or 
+    $x=2, y=1$, which are actually equivalent. Then $z$ can be $1$ 
+    or $2$, and in any situation, there'll be either $z=x$ or $z=y$,
+    making the statement true. Overall, $U=\left\{ 1,2 \right\}$
+    makes the statement true.
+
+    (b) Compared to (a), if we want to make the statement false,
+    we only need to guarantee that \textbf{not} all $z\in V$
+    satisfy either $z=x$ or $z=y$. Therefore, we must make sure
+    that $z$ can equal to some values other than $x,y$, so that
+    we only need to choose a domain that contains more than 2 elements.
+    For example, pick $V=\left\{ 0,1,2 \right\}$, and $x,y$ will be 
+    two values of the three, and when $z$ equals to the remaining 
+    element, $(z=x)\vee (z=y)$ is false.
+
+    \newpage
+    \textbf{Question 4:}
+    \begin{align*}
+        &\ \ \ \ \left( \begin{array}{c}
+        \big( (p\rightarrow q) \leftrightarrow (q\rightarrow r)\big)
+        \rightarrow (p \rightarrow r)
+        \end{array} \right) \rightarrow s\\
+        &\equiv \left( \begin{array}{c}
+        \big( (p\rightarrow q) \wedge (q\rightarrow r)\big) 
+        \vee 
+        \big( \neg (p\rightarrow q) \wedge \neg (q\rightarrow r) \big)
+        \rightarrow (p \rightarrow r)
+        \end{array} \right) \rightarrow s\\
+        &\equiv \left( \begin{array}{c}
+        \big( (\neg p \vee q) \wedge (\neg q\vee r)\big) 
+        \vee 
+        \big( \neg (\neg p\vee q) \wedge \neg (\neg q\vee r) \big)
+        \rightarrow (\neg p \vee r)
+        \end{array} \right) \rightarrow s\\
+        &\equiv \left( \begin{array}{c}
+        \big( (\neg p \vee q) \wedge (\neg q\vee r)\big) 
+        \vee 
+        \neg \big( (\neg p\vee q) \vee  (\neg q\vee r) \big)
+        \rightarrow (\neg p \vee r)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by DeMorgan's Law)}\\
+        &\equiv \left( \begin{array}{c}
+        \big( (\neg p \vee q) \wedge (\neg q\vee r)\big) 
+        \vee 
+        \neg \big( \neg p\vee q \vee  \neg q\vee r \big)
+        \rightarrow (\neg p \vee r)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by Commutative Laws)}\\
+        &\equiv \left( \begin{array}{c}
+        \big( (\neg p \vee q) \wedge (\neg q\vee r)\big) 
+        \vee 
+        \neg \big( \neg p\vee T \vee r \big)
+        \rightarrow (\neg p \vee r)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by Negation Laws)}\\
+        &\equiv \left( \begin{array}{c}
+        \big( (\neg p \vee q) \wedge (\neg q\vee r)\big) 
+        \vee F
+        \rightarrow (\neg p \vee r)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by Domination Laws)}\\
+        &\equiv \left( \begin{array}{c}
+        \big( (\neg p \vee q) \wedge (\neg q\vee r)\big) 
+        \rightarrow (\neg p \vee r)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by Identity Laws)}\\
+        &\equiv \left( \begin{array}{c}
+        \neg \big( (\neg p \vee q) \wedge (\neg q\vee r)\big) 
+        \vee (\neg p \vee r)
+        \end{array} \right) \rightarrow s\\
+        &\equiv \left( \begin{array}{c}
+        \big( \neg (\neg p \vee q) \vee \neg (\neg q\vee r)\big) 
+        \vee (\neg p \vee r)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by DeMorgan's Law)}\\
+        &\equiv \left( \begin{array}{c}
+        \big( (p \wedge \neg q) \vee (q\wedge \neg r)\big) 
+        \vee (\neg p \vee r)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by DeMorgan's Law)}\\
+        &\equiv \left( \begin{array}{c}
+        \big( (p \wedge \neg q) \vee \neg p \big) \vee
+        \big((q\wedge \neg r)\vee r\big)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by Commutative Laws, Associative Laws)}\\
+        &\equiv \left( \begin{array}{c}
+        \big( (p\vee \neg p)\wedge (\neg q \vee \neg p) \big) \vee
+        \big( (q\vee r) \wedge (\neg r \vee r) \big)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by Distributive Laws)}\\
+        &\equiv \left( \begin{array}{c}
+        \big( T \wedge (\neg q \vee \neg p) \big) \vee
+        \big( (q\vee r) \wedge T \big)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by Negation Laws)}\\
+        &\equiv \left( \begin{array}{c}
+        (\neg q \vee \neg p) \vee (q\vee r)
+        \end{array} \right) \rightarrow s
+        \ \ \text{(by Identity Laws)}\\
+        &\equiv \big( (\neg q \vee q) \vee \neg p \vee r \big) 
+        \rightarrow s
+        \ \ \text{(by Commutative Laws, Associative Laws)}\\
+        &\equiv \big( T \vee \neg p \vee r \big) 
+        \rightarrow s
+        \ \ \text{(by Negation Laws)}\\
+        &\equiv T \rightarrow s 
+        \ \ \text{(by Domination Laws)}\\
+        &\equiv s
+    \end{align*}
+    \begin{align*}
+    &\ \ \ ((p\wedge q) \rightarrow p)\wedge (s \wedge (r\vee s))\\
+    &\equiv (\neg(p\wedge q)\vee p) \wedge s\wedge (r\vee s)\\
+    &\equiv (\neg p \vee \neg q \vee p) \wedge s \wedge (r \vee s)
+    \ \  \text{(by DeMorgan's Law)}\\
+    &\equiv (T\vee \neg q) \wedge s \wedge (r\vee s)
+    \ \ \text{(by Commutative Laws, Negation Laws)}
+    \hspace{12em}\\ % create align
+    &\equiv s\wedge (r\vee s)\\
+    &\equiv s \ \ \ \ \text{(by Absorption Laws)}
+    \end{align*}
+
+    \setlength{\parindent}{0em}
+    Therefore, the two propositions are logically equivalent.
+
+
+
+    \end{spacing}
+\end{document}
