@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1616157213 "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.tex" "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.pdf" "article" 1616157214
-  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.aux" 1616157214 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.tex" 1616157212 7256 b0ab03dcdecd25d65fa3e8b185454351 ""
+["pdflatex"] 1616919824 "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.tex" "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.pdf" "article" 1616919826
+  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.aux" 1616919825 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.tex" 1616919826 7256 0088401c77470e736bb561c38587c92b ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -61,11 +61,11 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1601299171 2432464 fc8a79e45a76a536b96a2fbb296c94fd ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "article.aux" 1616157214 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "article.tex" 1616157212 7256 b0ab03dcdecd25d65fa3e8b185454351 ""
+  "article.aux" 1616919825 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "article.tex" 1616919826 7256 0088401c77470e736bb561c38587c92b ""
   (generated)
-  "article.pdf"
   "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.log"
   "article.log"
-  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.pdf"
   "article.aux"
+  "article.pdf"
+  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW3/article.pdf"
