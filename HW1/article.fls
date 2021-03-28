@@ -1,9 +1,9 @@
-PWD /Users/dog/Google 云端硬盘/2711-HW/HW1
+PWD /Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1
 INPUT /usr/local/texlive/2020/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/dog/Google 云端硬盘/2711-HW/HW1/article.tex
-OUTPUT /Users/dog/Google 云端硬盘/2711-HW/HW1/article.log
+INPUT /Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.tex
+OUTPUT /Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.log
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/size12.clo
@@ -36,9 +36,9 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-INPUT /Users/dog/Google 云端硬盘/2711-HW/HW1/article.aux
-INPUT /Users/dog/Google 云端硬盘/2711-HW/HW1/article.aux
-OUTPUT /Users/dog/Google 云端硬盘/2711-HW/HW1/article.aux
+INPUT /Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.aux
+INPUT /Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.aux
+OUTPUT /Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.aux
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -74,9 +74,9 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT /Users/dog/Google 云端硬盘/2711-HW/HW1/article.pdf
+OUTPUT /Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.pdf
 INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /Users/dog/Google 云端硬盘/2711-HW/HW1/article.aux
+INPUT /Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.aux
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb

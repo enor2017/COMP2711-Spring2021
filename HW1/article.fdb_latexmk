@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1613656044 "/Users/dog/Google 云端硬盘/2711-HW/HW1/article.tex" "/Users/dog/Google 云端硬盘/2711-HW/HW1/article.pdf" "article" 1613656045
-  "/Users/dog/Google 云端硬盘/2711-HW/HW1/article.aux" 1613656045 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/dog/Google 云端硬盘/2711-HW/HW1/article.tex" 1613656043 6874 c1e0fbf77ab4532d0c703d778988c96b ""
+["pdflatex"] 1616223736 "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.tex" "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.pdf" "article" 1616223763
+  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.aux" 1616223736 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.tex" 1613656043 6874 c1e0fbf77ab4532d0c703d778988c96b ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -50,11 +50,11 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1601299171 2432464 fc8a79e45a76a536b96a2fbb296c94fd ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "article.aux" 1613656045 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "article.aux" 1616223736 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
   "article.tex" 1613656043 6874 c1e0fbf77ab4532d0c703d778988c96b ""
   (generated)
+  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.log"
   "article.log"
   "article.pdf"
-  "/Users/dog/Google 云端硬盘/2711-HW/HW1/article.pdf"
+  "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.pdf"
   "article.aux"
-  "/Users/dog/Google 云端硬盘/2711-HW/HW1/article.log"

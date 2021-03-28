@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.28)  18 FEB 2021 21:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.28)  20 MAR 2021 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/dog/Google 云端硬盘/2711-HW/HW1/article.tex"
-(/Users/dog/Google 云端硬盘/2711-HW/HW1/article.tex
+**"/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.tex"
+(/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -113,7 +113,7 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count190
 \l__pdf_internal_box=\box47
-) (/Users/dog/Google 云端硬盘/2711-HW/HW1/article.aux)
+) (/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.aux)
 \openout1 = `article.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -174,17 +174,17 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (/Users/dog/Google 云端硬盘/2711-HW/HW1/article.aux) ) 
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.aux) ) 
 Here is how much of TeX's memory you used:
  2092 strings out of 480608
- 27892 string characters out of 5903630
+ 28072 string characters out of 5903630
  279350 words of memory out of 5000000
  18002 multiletter control sequences out of 15000+600000
  540495 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,18n,31p,268b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,18n,31p,288b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "/Users/dog/Google 云端硬盘/2711-HW/HW1/article.pdf" (2 pages, 85973 bytes).
+Output written on "/Users/dog/Google 云端硬盘/2711-HW/COMP2711-Spring2021/HW1/article.pdf" (2 pages, 85973 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  30 compressed objects within 1 object stream
