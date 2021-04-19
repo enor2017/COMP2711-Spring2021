@@ -108,46 +108,48 @@
 
     \textbf{Question 4:}
 
-    (a) Notice that $a^{2^k}=(a^{2^{k-1}})^2.$
+    (a) Notice that $a^{n}=(a^{n/2})^2.$
 
     \setlength{\parindent}{4em}
 
     \textbf{procedure} power ($a$ : real number, $n$ : positive integer) 
     
-    \textbf{if} $n = 1$ \textbf{then return} $a^2$
+    \textbf{if} $n = 1$ \textbf{then return} $a$
 
-    \textbf{else return} [power($a, n-1$)]$^2$
+    \textbf{else return} [power($a, n/2$)]$^2$
 
     \setlength{\parindent}{0em}
 
     \vspace{5pt}
 
-    (b) According to the algorithm in (a), in order to find $a^{2^k}$,
-    we find $a^{2^{k-1}}$ instead since $a^{2^k}=(a^{2^{k-1}})^2$,
-    and then we try to find $a^{2^{k-2}}, a^{2^{k-3}}, \cdots$ until
-    we reach $a^{2^0}$, that is, $n=1$.
+    (b) According to the algorithm in (a), in order to find $a^n$,
+    we find $a^{n/2}$ instead since $a^n=(a^{n/2})^2$,
+    and then we try to find $a^{n/4}, a^{n/8}, \cdots$ until
+    we reach $a^{1}$, that is, the end of our recursion.
     Thus, if we denote the the number of multiplications used as 
     $T(n)$, then we will have: 
-    $$T(n)=T(n-1)+1\ (\forall n\ge 2)$$
-    $$T(1)=1$$
+    $$T(n)=T\left(\frac{n}{2}\right)+1\ (n\ge 2)$$
+    $$T(1)=0$$
 
     \vspace{5pt}
 
-    (c) From (b), we have:
+    (c) Assume $n=2^k$ for some integer $k\ge 0$, then from (b), we have:
     \begin{align*}
-        T(n)&=T(n-1)+1\\
-        T(n-1)&=T(n-2)+1\\
-        T(n-2)&=T(n-3)+1\\
-        &\vdots\\
-        T(2)&=T(1)+1
+        T(2^k)&=T(2^{k-1})+1\\
+        T(2^{k-1})&=T(2^{k-2})+1\\
+        \vdots\\
+        T(2^1)&=T(2^{0})+1
     \end{align*}
 
     Add up all equations above, we get:
     \begin{align*}
-        T(n)+T(n-1)+\cdots + T(2)&=T(n-1)+T(n-2)+\cdots + T(2)+T(1)+(n-1)\\
-        T(n)&=T(1)+(n-1)\\
-        T(n)&=n
+        T(2^k)+T(2^{k-1})+\cdots + T(2^1)&=T(2^{k-1})+T(2^{k-2})+\cdots 
+        + T(2^1)+T(2^0)+(k)\\
+        T(2^k)&=T(2^0)+(k)\\
+        T(n)&=T(1)+\log_2 n=\log_2 n
     \end{align*}
+
+    Therefore, the number of multiplications is $\log_2 n$.
 
 
 
