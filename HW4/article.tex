@@ -1,0 +1,156 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{setspace}
+\geometry{left=2.3cm, right=2.3cm, top=2.54cm, bottom=2.54cm}
+
+\title{\textbf{COMP2711} Homework4}
+\author{LIU, Jianmeng 20760163}
+\date{}
+
+\begin{document}
+    \maketitle
+
+    \begin{spacing}{1.4}
+
+    \setlength{\parindent}{0em}
+
+    \textbf{Question 1:}
+
+    (a) Obviously $\forall x \ge 1, x^3>x^3\log_2 x$, so $n=3$ is not enough.
+    When $x\ge 1$, we can easily know $2x^2+x^3\log_2 x \ge 2x^4+x^4=3x^4$.
+    Therefore $n=4$, with witnesses $C=3, k=1$.
+
+    \vspace{5pt}
+
+    (b) We know $\forall x \ge 1(\log_2 x)^4<x^5$, so $3x^5$ is dominant.
+    When $x\ge 1$, $3x^5+(\log_2 x)^4\le 3x^5+x^5=4x^5$. Hence $n=5$,
+    with witnesses $C=4, k=1$.
+
+    \vspace{5pt}
+
+    (c) We know for all $x\ge 1$,
+    $$f(x)=\frac{x^4+x^2+1}{x^4+1}=1+\frac{x^2}{x^4+1}<1+1=2$$
+    Hence $n=0$ as $f(x)$ is $O(1)$, with witnesses $C=2, k=1$.
+
+    \vspace{5pt}
+
+    (d) For all $x\ge 1$, 
+    $$f(x)=\frac{x^3+5\log_2 x}{x^4+1}<\frac{x^3+5x^3}{x^4+1}
+    <\frac{6x^3}{x^4+1}<\frac{6(x^4+1)}{x^4+1}=6$$
+    Hence $n=0$ as $f(x)$ is $O(1)$, with witnesses $C=6, k=1$.
+
+    \vspace{20pt}
+
+    \textbf{Question 2:}
+
+    \setlength{\parindent}{2em}
+
+    Firstly, we denote the first player as Player A, second as
+    Player B; denote $(i, j)$ as the cell at the $i$-th
+    row and $j$-th column.
+
+    Let $P(n):$ If now the board consists of 
+    only $n$ cookies in the top row
+    and $n$ cookies in the left-most column, i.e., cookies fill
+    all the cells from $(1, 1), (1, 2), \cdots ,(1, n)$, and 
+    $(n, 1), (n, 2), \cdots ,(n, n)$, and it's Player B's turn
+    to pick cookies, then Player A has a winning strategy.
+
+    We want to prove $P(n)$ by strong induction.
+
+    \textit{Basis Step:} It is obvious that $P(1)$ is true, 
+    since Player B is made to eat the poisoned cookie.
+    
+    \textit{Inductive Step:}
+    For $k\ge 1$, we assume that $\forall i\le k, P(i)$ is true,
+    and we need to prove that $P(k+1)$ is true. If Player B
+    picks the cookie $(1,1)$, then Player A wins. Otherwise, if Player
+    B picks $(1,j)$ or $(j,1)$ for some $j$ with $2\le j\le k+1$,
+    then Player A just picks $(j,1)$ or $(1,j)$, correspondingly.
+    After a round like this, the situation becomes $P(j-1)$. 
+    From our assumption, we know $P(j-1)$ is true, so that $P(k+1)$
+    is true.
+
+    Therefore, by strong induction, we know $P(n)$ is true, so that 
+    Player A has a winning strategy.
+
+    \vspace{20pt}
+
+    \setlength{\parindent}{0em}
+
+    \textbf{Question 3:}
+
+    \textbf{Recursive Definition:}
+
+    \hspace{2em} \textit{Basis Step:} $(1, 1)\in S$.
+
+    \hspace{2em} \textit{Recursive Step:} 
+    if $(a, b)\in S$, then $(a+2, b)\in S, (a, b+2) \in S, (a+1, b+1)\in S$.
+
+
+    \textbf{Proof by Structural Induction:}
+
+    \hspace{2em} \textit{Basis Step:} 
+    Apparently, $(1, 1)\in S$ since $1+1=2$ is even.
+    
+    \hspace{2em} \textit{Recursive Step:} 
+    Assume $(a,b)\in S$, then we know $a+b$ is even. Thus, 
+    $(a+2, b), (a, b+2),  (a+1, b+1)$ all must in $S$, since
+    $a+2+b=a+b+2=a+1+b+1=(a+b)+2$ is even.
+
+    Therefore, according to the principle of structural induction,
+    $a+b$ is even for all $(a,b)\in S$.
+
+
+    \vspace{20pt}
+
+    \textbf{Question 4:}
+
+    (a) Notice that $a^{2^k}=(a^{2^{k-1}})^2.$
+
+    \setlength{\parindent}{4em}
+
+    \textbf{procedure} power ($a$ : real number, $n$ : positive integer) 
+    
+    \textbf{if} $n = 1$ \textbf{then return} $a^2$
+
+    \textbf{else return} [power($a, n-1$)]$^2$
+
+    \setlength{\parindent}{0em}
+
+    \vspace{5pt}
+
+    (b) According to the algorithm in (a), in order to find $a^{2^k}$,
+    we find $a^{2^{k-1}}$ instead since $a^{2^k}=(a^{2^{k-1}})^2$,
+    and then we try to find $a^{2^{k-2}}, a^{2^{k-3}}, \cdots$ until
+    we reach $a^{2^0}$, that is, $n=1$.
+    Thus, if we denote the the number of multiplications used as 
+    $T(n)$, then we will have: 
+    $$T(n)=T(n-1)+1\ (\forall n\ge 2)$$
+    $$T(1)=1$$
+
+    \vspace{5pt}
+
+    (c) From (b), we have:
+    \begin{align*}
+        T(n)&=T(n-1)+1\\
+        T(n-1)&=T(n-2)+1\\
+        T(n-2)&=T(n-3)+1\\
+        &\vdots\\
+        T(2)&=T(1)+1
+    \end{align*}
+
+    Add up all equations above, we get:
+    \begin{align*}
+        T(n)+T(n-1)+\cdots + T(2)&=T(n-1)+T(n-2)+\cdots + T(2)+T(1)+(n-1)\\
+        T(n)&=T(1)+(n-1)\\
+        T(n)&=n
+    \end{align*}
+
+
+
+    
+    \end{spacing}
+\end{document}
