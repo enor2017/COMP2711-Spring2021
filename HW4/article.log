@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.28)  19 APR 2021 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.28)  19 APR 2021 22:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -140,14 +140,14 @@ LaTeX Font Info:    ... okay on input line 12.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(65.44142pt, 466.62503pt, 65.44142pt)
-* v-part:(T,H,B)=(72.2698pt, 700.50723pt, 72.2698pt)
+* v-part:(T,H,B)=(68.28644pt, 704.4906pt, 72.2698pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=466.62503pt
-* \textheight=700.50723pt
+* \textheight=704.4906pt
 * \oddsidemargin=-6.82857pt
 * \evensidemargin=-6.82857pt
-* \topmargin=-37.00018pt
+* \topmargin=-40.98355pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -178,13 +178,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Here is how much of TeX's memory you used:
  2091 strings out of 480608
  27984 string characters out of 5903630
- 271356 words of memory out of 5000000
+ 271355 words of memory out of 5000000
  17999 multiletter control sequences out of 15000+600000
  539791 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,9n,31p,280b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "/Users/dog/Google 云端硬盘/COMP2711-Spring2021/HW4/article.pdf" (2 pages, 127684 bytes).
+Output written on "/Users/dog/Google 云端硬盘/COMP2711-Spring2021/HW4/article.pdf" (2 pages, 127714 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
