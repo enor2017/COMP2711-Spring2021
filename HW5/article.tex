@@ -1,0 +1,143 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{setspace}
+\geometry{left=2.3cm, right=2.3cm, top=2.4cm, bottom=2.54cm}
+
+\title{\textbf{COMP2711} Homework5}
+\author{LIU, Jianmeng 20760163}
+\date{}
+
+\begin{document}
+    \maketitle
+
+    \begin{spacing}{1.4}
+
+    \setlength{\parindent}{0em}
+
+    \textbf{Question 1:}
+
+    (a) There are $5+11=16$ teachers and students in total. When they
+    sit in a row, they provide 17 spaces(represent by $\circ$):
+    $$\circ 1 \circ 2 \circ 3 \circ \cdots \circ 15 \circ 16 \circ$$
+    Firstly, choose 4 spaces from those 17 spaces where guests can seat:
+    ${17\choose 4}$, then, guests can swap their positions and teachers and
+    students can also swap their positions, this will be $4!\cdot 16!$.
+    So the answer is:
+    $${17\choose 4}\cdot 4!\cdot 16!$$
+
+    \vspace{5pt}
+
+    (b) There are $5+11=16$ teachers and students in total. When they
+    sit in a row, they provide 16 spaces. 
+    Firstly, choose 4 spaces from those 16 spaces where guests can seat:
+    ${16\choose 4}$, then, guests can swap their positions, which will 
+    be $4!$, and teachers and students can also swap their positions, 
+    but this time it will be $\frac{16!}{16}$, since arranged in circle.
+    So the answer is:
+    $${16\choose 4}\cdot 4!\cdot \frac{16!}{16}={16\choose 4}\cdot 4!\cdot 15!$$
+
+    \vspace{5pt}
+
+    (c) There are $5+4=9$ teachers and guests in total. When they
+    sit in a row, they provide 10 spaces. Since there are 11 students,
+    it's impossible to let them sit in 10 spaces, i.e., 
+    ${10\choose 11}=0$. Thus the answer is 0.
+
+    
+    \vspace{20pt}
+
+    \textbf{Question 2:}
+
+    \hspace{2em}
+    Note that the passcode follows non-decreasing order, so as long as
+    we pick out 30 alphabets, there is only one possible order
+    to arrange them. Since $2+7+1+1=11$ alphabets have already been 
+    chosen, we only need to pick $30-11=19$ alphabets from A $\sim $ Z.
+
+    \hspace{2em}
+    If those 19 alphabets only contain one kind of letter,(e.g. 
+    all choose A/ all choose B, ...) then it's trivial that
+    there are ${26\choose 1}$ ways.
+
+    \hspace{2em}
+    If those 19 alphabets contain two kinds of letter,(e.g. only contains
+    A and B, ... ) then we consider it in two steps: firstly choose 2 kinds
+    of letter from 26 letters, ${26\choose 2}$ ways, then we consider
+    how many of them will we choose, respectively. 
+    This can be easily solved by thinking of putting 19 balls into 2 boxes,
+    (where the boxes must be non-empty) so there are ${18\choose 1}$ ways.
+    Thus, there are ${26\choose 2}\cdot {18\choose 1}$ in total.
+
+    \hspace{2em}
+    By the same method, if those 19 alphabets contain $k$ different letters,
+    there are ${26\choose k}\cdot {18\choose k-1}$ ways in total, where
+    $1\le k\le 19$.
+
+    \hspace{2em}
+    To sum up, there are:
+    $$\sum_{k=1}^{19}{26\choose k}\cdot {18\choose k-1}$$
+    possible passwords.
+
+
+    \vspace{20pt}
+
+
+    \textbf{Question 3:}
+
+    \hspace{2em}
+    Assume that there are $n-3$ apples and $n-2$ pears in total,
+    and you would like to pick 10 fruits to eat. So we would like
+    to calculate how many ways can you do that in two methods:
+ 
+    \textbf{Method 1:} 
+    
+    \hspace{2em}
+    Since we just want to choose any 10 fruit in 
+    $2n-5$ fruites, so there are ${2n-5\choose 10}$ ways.
+
+    \textbf{Method 2:} 
+    
+    \hspace{2em}
+    We enumerate how many apples to choose: 
+    for example, we want to choose $k$ apples and $10-k$ pears, out of
+    $n-3$ apples and $n-2$ pears, so there are 
+    ${n-3\choose k}\cdot {n-2\choose 10-k}$ ways.
+    Note that $0\le k \le 10$, so there're 
+    $\sum_{k=0}^{10}{n-3\choose k}\cdot {n-2\choose 10-k}$ ways in total.
+
+    Therefore, we have:
+    $${2n-5\choose 10}=\sum_{k=0}^{10}{n-3\choose k}\cdot {n-2\choose 10-k}$$
+
+
+    \vspace{20pt}
+
+    \textbf{Question 4:}
+
+    \hspace{2em}
+    We try to simply consider one team as a whole(as one person), 
+    then there'll only be 
+    19 people sitting in a row. Under this assumption, there are
+    ${10\choose 1}\cdot 19!\cdot 2!$ ways.
+
+    \hspace{2em}
+    However, we find that some situations have been counted more than once.
+    For example, if we denote 10 teams as $1,2,\cdots 10$ and the two
+    people inside one team as $A, B$, then the situation:
+    $$1_A 1_B 2_A 2_B 3_B 3_A 4_B 4_A\cdots 10_B 10_A$$
+    will be counted when we consider team 1 as a whole, and will also be 
+    counted when we consider team 2 as a whole, and also 3, 4, $\cdots$ 10
+    as a whole.
+
+    \hspace{2em}
+    Thus, we need to use Inclusion-Exclusion Principle, and the final result
+    will be:
+    $$\sum_{k=1}^{10}(-1)^{(k+1)}\cdot {10\choose k}\cdot (20-k)!\cdot (2!)^k$$
+    
+
+    
+
+    
+    \end{spacing}
+\end{document}
