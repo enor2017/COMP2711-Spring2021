@@ -56,29 +56,48 @@
     to arrange them. Since $2+7+1+1=11$ alphabets have already been 
     chosen, we only need to pick $30-11=19$ alphabets from A $\sim $ Z.
 
-    \hspace{2em}
-    If those 19 alphabets only contain one kind of letter,(e.g. 
-    all choose A/ all choose B, ...) then it's trivial that
-    there are ${26\choose 1}$ ways.
+    % \hspace{2em}
+    % If those 19 alphabets only contain one kind of letter,(e.g. 
+    % all choose A/ all choose B, ...) then it's trivial that
+    % there are ${26\choose 1}$ ways.
+
+    % \hspace{2em}
+    % If those 19 alphabets contain two kinds of letter,(e.g. only contains
+    % A and B, ... ) then we consider it in two steps: firstly choose 2 kinds
+    % of letter from 26 letters, ${26\choose 2}$ ways, then we consider
+    % how many of them will we choose, respectively. 
+    % This can be easily solved by thinking of putting 19 balls into 2 boxes,
+    % (where the boxes must be non-empty) so there are ${18\choose 1}$ ways.
+    % Thus, there are ${26\choose 2}\cdot {18\choose 1}$ in total.
+
+    % \hspace{2em}
+    % By the same method, if those 19 alphabets contain $k$ different letters,
+    % there are ${26\choose k}\cdot {18\choose k-1}$ ways in total, where
+    % $1\le k\le 19$.
+
+    % \hspace{2em}
+    % To sum up, there are:
+    % $$\sum_{k=1}^{19}{26\choose k}\cdot {18\choose k-1}$$
+    % possible passwords.
 
     \hspace{2em}
-    If those 19 alphabets contain two kinds of letter,(e.g. only contains
-    A and B, ... ) then we consider it in two steps: firstly choose 2 kinds
-    of letter from 26 letters, ${26\choose 2}$ ways, then we consider
-    how many of them will we choose, respectively. 
-    This can be easily solved by thinking of putting 19 balls into 2 boxes,
-    (where the boxes must be non-empty) so there are ${18\choose 1}$ ways.
-    Thus, there are ${26\choose 2}\cdot {18\choose 1}$ in total.
+    To solve this problem, we can consider there are 19 balls and 
+    25 bars arranged in a row, such that the 25 bars separate balls into
+    26 groups, and the number of balls in group $i$ represents
+    the number of the $i$-th alphabet in the passcode. For example, 
+    if we use ``$\circ$'' to denote balls and use ``$|$'' to denote bars, then
+    $$|\circ \circ | \circ | \circ \circ \circ | \cdots$$
+    means zero A, two B, one C, three D... are chosen.
 
     \hspace{2em}
-    By the same method, if those 19 alphabets contain $k$ different letters,
-    there are ${26\choose k}\cdot {18\choose k-1}$ ways in total, where
-    $1\le k\le 19$.
+    Thus, we only need to choose 19 positions for balls among the
+    total $19+25=44$ items, which gives ${44\choose 19}$ ways. 
+    That means we have ${44\choose 19}$ ways to pick 19 alphabets 
+    from A $\sim $ Z, and also means there are this number of 
+    different passcodes.
 
     \hspace{2em}
-    To sum up, there are:
-    $$\sum_{k=1}^{19}{26\choose k}\cdot {18\choose k-1}$$
-    possible passwords.
+    The final answer is ${44\choose 19}$.
 
 
     \vspace{20pt}
@@ -125,7 +144,7 @@
     However, we find that some situations have been counted more than once.
     For example, if we denote 10 teams as $1,2,\cdots 10$ and the two
     people inside one team as $A, B$, then the situation:
-    $$1_A 1_B 2_A 2_B 3_B 3_A 4_B 4_A\cdots 10_B 10_A$$
+    $$1_A 1_B 2_A 2_B 3_A 3_B 4_A 4_B\cdots 10_A 10_B$$
     will be counted when we consider team 1 as a whole, and will also be 
     counted when we consider team 2 as a whole, and also 3, 4, $\cdots$ 10
     as a whole.
