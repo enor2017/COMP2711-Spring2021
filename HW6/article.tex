@@ -1,0 +1,186 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\geometry{left=2.3cm, right=2.3cm, top=2.4cm, bottom=2.54cm}
+
+\title{\textbf{COMP2711} Homework6}
+\author{LIU, Jianmeng 20760163}
+\date{}
+
+\begin{document}
+    \maketitle
+
+    \begin{spacing}{1.4}
+
+    \setlength{\parindent}{0em}
+
+    \textbf{Question 1:}
+
+    \hspace{2em}
+    Assume $A:$ the string contains at least two consecutive 0s, 
+    $B:$ the second bit is a 1. Then we want to find $P(A|B).$
+
+    \hspace{2em}
+    We first count number of strings that satisfy $A\cap B$.
+    The first bit can always be 0 or 1 (since it doesn't effect
+    the number of strings that contains consecutive 0s), we only
+    need to focus on the last 6 bits, and count the number of strings
+    $of\ length\ 6$ that contains at least two consecutive 0s.
+
+    \hspace{2em}
+    For the last 6 bits, we count how many strings doesn't contain
+    consecutive 0s instead:
+    if there are zero 0 and six 1s, 
+    there is only one possible string (111111); if one 0 and 
+    five 1s, then there are ${6\choose 1}$ strings; 
+    if two 0s and four 1s, we insert 0s into the five spaces between
+    four 1s(including left and right sides), then there are 
+    ${5\choose 2}$ strings; and if three 0s and three 1s,
+    there are ${4\choose 3}$ strings; if there are four or more 0s,
+    then it must contain consecutive 0s. So in total, there are
+    $1+{6\choose 1}+{5\choose 2}+{4\choose 3}=21$ strings of length 6
+    that $don't\ contain$ consecutive 0s. Then,
+    $$P(A\cap B)=2\cdot \frac{2^6-21}{2^8}=\frac{86}{256}$$
+    
+    We also now:
+    $$P(B)=\frac{2^7}{2^8}=\frac{128}{256}$$
+
+    Thus,
+    $$P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{86}{128}=\frac{43}{64}.$$
+
+
+    \textbf{Question 2:}
+
+    \hspace{2em}
+    Assume $A:$ one is infected with HIV, $B:$ one is tested positive.
+    Then we know $P(A)=8\%,\ P(B|A)=98\%,\ P(B|\overline{A})=3\%$.
+
+    (a)
+    \begin{align*}
+        P(A|B)&=\frac{P(B|A)P(A)}
+            {P(B|A)P(A)+P(B|\overline{A})P(\overline{A})}\\
+            &=\frac{98\%\cdot 8\%}{98\%\cdot 8\%+3\%\cdot 92\%}\\
+            &=73.96\%
+    \end{align*} 
+    (b)
+    $$P(\overline{A}|B)=1-P(A|B)=26.04\%$$
+    % \begin{align*}
+    %     P(\overline{A}|B)&=\frac{P(B|\overline{A})P(\overline{A})}
+    %         {P(B|\overline{A})P(\overline{A})
+    %         +P(B|A)P(A)}\\
+    %         &=\frac{3\%\cdot 92\%}{3\%\cdot 92\%+98\%\cdot 8\%}\\
+    %         &=26.04\%
+    % \end{align*} 
+
+
+    \textbf{Question 3:}
+
+    \hspace{2em}
+    (a) We first count how many possiblities are there when 
+    $X=k$ ($1\le k\le 6, k\in \mathbb{Z}$). 
+    Since $\min\{ D_1,D_2 \}=k$, either $D_1$ or $D_2$ 
+    should be $k$, and the other one can be any number 
+    $no\ less\ than\ k$, so there are
+    $$1\cdot (7-k) + (7-k) \cdot 1 -1=13-2k$$ different possibilities.
+    Note here we minus $1$ because $D_1=D_2=k$ should be counted
+    only once. Thus,
+    $$P(X=k)=\frac{13-2k}{6\cdot 6}=\frac{13-2k}{36}.$$
+    The distribution function of $X$ is:
+    $$f(X)=\frac{13-2k}{36},\ (1\le X\le 6, X\in \mathbb{Z})$$
+
+    
+    (b) We can list all possible values of $X$ and their corresponding
+    possibilities $P(X)$:
+
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c|c|c}
+            \hline
+            $X$ & 1 & 2 & 3 & 4 & 5 & 6\\\hline
+            $P(X)$ & $\frac{11}{36}$ & $\frac{9}{36}$ & $\frac{7}{36}$&
+            $\frac{5}{36}$ & $\frac{3}{36}$ & $\frac{1}{36}$\\\hline 
+        \end{tabular}
+    \end{center}
+
+    Therefore, $\displaystyle
+    E(X)=1\cdot \frac{11}{36}+2\cdot \frac{9}{36} +
+    3\cdot \frac{7}{36} +4\cdot \frac{5}{36} 
+    +5\cdot \frac{3}{36}+6\cdot \frac{1}{36}=\frac{91}{36}.$
+
+    \vspace{10pt}
+
+    (c) Firstly, we find $E(X^2)$:
+
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c|c|c}
+            \hline
+            $X^2$ & 1 & 4 & 9 & 16 & 25 & 36\\\hline
+            $P(X^2)$ & $\frac{11}{36}$ & $\frac{9}{36}$ & $\frac{7}{36}$&
+            $\frac{5}{36}$ & $\frac{3}{36}$ & $\frac{1}{36}$\\\hline 
+        \end{tabular}
+    \end{center}
+   
+    Therefore, $\displaystyle
+    E(X^2)=1\cdot \frac{11}{36}+4\cdot \frac{9}{36} +
+    9\cdot \frac{7}{36} +16\cdot \frac{5}{36} 
+    +25\cdot \frac{3}{36}+36\cdot \frac{1}{36}=\frac{301}{36}.$
+
+    $$V(X)=E(X^2)-E(X)^2=\frac{301}{36}-\left( \frac{91}{36}\right)^2
+    =\frac{2555}{1296}$$
+
+
+    \vspace{20pt}
+
+    \textbf{Question 4:}
+
+    \hspace{2em}
+    Firstly, assume a directed multigraph having no isolated vertices
+    has an Euler circuit. Since there exists a path from any vertex
+    to any other vertex, the graph must be strongly connected, 
+    so it must also be weakly connected. If we follow the Euler circuit,
+    when the circuit passes a vertex, it adds one in-degree and 
+    one out-degree to this vertex(when circuit passes the vertex,
+    it comes into the vertex and then goes out of it). Thus 
+    the in-degree and out-degree of each vertex are equal.
+
+    \hspace{2em}
+    Conversely, if a graph is weakly connected and the in-degree
+    and out-degree of each vertex are equal, we can use the 
+    algorithm provided during lecture to construct an Euler circuit:
+
+    \newpage
+    \begin{tcolorbox}
+        \begin{lstlisting}[language=Python]
+    c := empty cycle
+    while there are still edge not taken yet
+        u := any vertex already seen
+        c2 := Find-Cycle(u)
+        insert c2 into c at u
+
+    Find-Cycle(u):
+    while u has an edge not taken yet
+        take that edge {u,v}
+        u := v
+        \end{lstlisting}
+    \end{tcolorbox}
+
+    \hspace{2em}
+    In the algorithm above, we use \verb|Find-Cycle(u)| to 
+    find a cycle. Since all degrees are even(in-degree and out-degree 
+    of each vertex are equal), cycle must exist.
+    However, it may not find a cycle that contains all edges, 
+    so we repeat executing the \verb|Find-Cycle(u)|, and 
+    connect all cycles into one. Then appearently, 
+    the final result will form a Euler cycle.
+
+    \hspace{2em}
+    In conclusion, a directed multigraph having no isolated vertices
+    has an Euler circuit iff the graph is weakly connected and the 
+    in-degree and out-degree of each vertex are equal.
+
+
+    \end{spacing}
+\end{document}
